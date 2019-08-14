@@ -7,8 +7,8 @@ class CashRegister
   end
 
   def add_item(item, price, quant = 1)
-    @price = price
-    @total += price * quant
+    @price = price * quant
+    @total += price
     quant.times {@items << item}
   end
 
